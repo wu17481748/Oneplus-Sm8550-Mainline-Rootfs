@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: between_${{ matrix.desktop }}
-          path: rootfs.7z
+          path: ubuntu-rootfs.7z
           compression-level: 0
 
   alsa:
