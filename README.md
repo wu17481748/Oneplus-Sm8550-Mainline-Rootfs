@@ -1,7 +1,7 @@
 <img align="right" src="ubnt.png" width="305" alt="Ubuntu 24.10 Running On A OnePlus Ace 3">
 
-# Ubuntu for OnePlus 12R/Ace 3
-This repo contians **Base Guide for installation/upgrading** and **Scripts for automatic building of Ubuntu RootFS, Mainline Kernel, Firmware package, ALSA configs** for OnePlus 12R/Ace 3
+# Ubuntu for OnePlus 12R/Ace 3/Ace 2 Pro
+This repo contians **Base Guide for installation/upgrading** and **Scripts for automatic building of Ubuntu RootFS, Mainline Kernel, Firmware package, ALSA configs** for OnePlus 12R/Ace 3/Ace 2 Pro
 
 ### [**Project status**](https://github.com/users/jiganomegsdfdf/projects/3/views/1)
 
@@ -12,7 +12,7 @@ Just go to the "Actions" tab, open the latest build and download files named **r
 ## Upgrading steps (From running Ubuntu)
 - Unpack all the .zip files you downloaded into one folder
 - Open terminal and go to the folder where you unpacked all .zip files into
-- Run "sudo dpkg -i *-oneplus-aston.deb"
+- Run "sudo dpkg -i *-oneplus-sm8550.deb"
 - If you use flashing instead of **fastboot boot**: flash a new boot image using "dd if="**path to boot.img**" of=/dev/disk/by-partlabel/boot_**('a' or 'b')**"
 - Reboot using new image
 

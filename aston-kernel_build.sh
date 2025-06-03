@@ -20,10 +20,10 @@ cat $1/linux/arch/arm64/boot/Image $1/linux/arch/arm64/boot/dts/qcom/sm8550-onep
 gzip Image_w_dtb
 $1/mkbootimg --header_version 4 --base 0x0 --os_version 15.0.0 --os_patch_level 2025-02 --kernel $1/linux/Image_w_dtb.gz -o $1/boot12G.img
 
-rm $1/linux-oneplus-aston/usr/dummy
-make -j$(nproc) ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=$1/linux-oneplus-aston/usr modules_install
-rm $1/linux-oneplus-aston/usr/lib/modules/**/build
+rm $1/linux-oneplus-sm8550/usr/dummy
+make -j$(nproc) ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- INSTALL_MOD_PATH=$1/linux-oneplus-sm8550/usr modules_install
+rm $1/linux-oneplus-sm8550/usr/lib/modules/**/build
 cd $1
 rm -rf linux
 
-dpkg-deb --build --root-owner-group linux-oneplus-aston
+dpkg-deb --build --root-owner-group linux-oneplus-sm8550
