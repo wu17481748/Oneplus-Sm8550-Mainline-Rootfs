@@ -2,6 +2,7 @@ git clone https://github.com/linux-msm/pil-squasher --depth 1
 cd pil-squasher
 make install
 
+rm -rf /firmware-oneplus-a15/usr/lib/firmware/qcom/sm8550/aston
 mkdir -p $1/firmware-oneplus-a14/usr/lib/firmware/qca/
 mkdir -p $1/firmware-oneplus-a14/usr/lib/firmware/ath12k/WCN7850/hw2.0/
 cp -rf $1/firmware-oneplus-a15/usr/lib/firmware/ath12k/WCN7850/hw2.0/* $1/firmware-oneplus-a14/usr/lib/firmware/ath12k/WCN7850/hw2.0/

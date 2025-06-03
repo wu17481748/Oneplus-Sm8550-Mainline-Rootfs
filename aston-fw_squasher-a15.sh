@@ -1,7 +1,7 @@
 git clone https://github.com/linux-msm/pil-squasher --depth 1
 cd pil-squasher
 make install
-
+rm -rf /firmware-oneplus-a15/usr/lib/firmware/qcom/sm8550/xigua
 /usr/local/bin/pil-squasher $1/firmware-oneplus-a15/usr/lib/firmware/qcom/sm8550/aston/adsp.mbn $1/firmware-oneplus-a15/usr/lib/firmware/qcom/sm8550/aston/adsp.mdt
 rm -rf $1/firmware-oneplus-a15/usr/lib/firmware/qcom/sm8550/aston/adsp.mdt $1/firmware-oneplus-a15/usr/lib/firmware/qcom/sm8550/aston/adsp.b*
 
