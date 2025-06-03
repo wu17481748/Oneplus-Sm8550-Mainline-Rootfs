@@ -1,8 +1,8 @@
 #!/bin/sh
 
-find $1/.. -name 'rootfs.7z' -exec mv "{}" $1/  \;
+find $1/.. -name 'ubuntu-rootfs.7z' -exec mv "{}" $1/  \;
 
-7z x rootfs.7z
+7z x ubuntu-rootfs.7z
 
 mkdir rootdir
 mount -o loop rootfs.img rootdir
@@ -34,4 +34,4 @@ umount rootdir
 
 rm -d rootdir
 
-7z a rootfs.7z rootfs.img
+7z a ubuntu-rootfs.7z rootfs.img
